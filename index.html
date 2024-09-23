@@ -64,7 +64,9 @@
 
           <div class="flex items-center gap-3">
             <img src="assets/coin.png" alt="Coin" />
-            <p class="text-xl font-semibold"><span>5500</span> BDT</p>
+            <p class="text-xl font-semibold">
+              <span id="cash-amount">5500</span> BDT
+            </p>
           </div>
         </div>
       </nav>
@@ -106,9 +108,10 @@
             <p
               class="flex items-center gap-2 text-lg bg-[#111111]/5 py-3 px-5 rounded-lg mb-4"
             >
-              <img src="assets/coin.png" alt="Coin" /> <span>0</span> BDT
+              <img src="assets/coin.png" alt="Coin" />
+              <span id="post-1-amount">0</span> BDT
             </p>
-            <h2 class="text-xl font-bold mb-4">
+            <h2 id="post-1-title" class="text-xl font-bold mb-4">
               Donate for Flood at Noakhali, Bangladesh
             </h2>
             <p class="text-lg font-light leading-7 mb-6">
@@ -120,12 +123,15 @@
               lives of those in need.
             </p>
             <input
+              id="post-1-input"
               class="border border-[#111111]/10 p-[18px] font-light text-lg rounded-lg w-full mb-4"
               type="text"
               placeholder="Write Donation Amount"
             />
             <button
+              id="post-1-btn"
               class="bg-primary text-xl font-semibold p-[18px] w-full text-center rounded-lg hover:bg-[#91db31] transition-all duration-300"
+              onclick="my_modal_1.showModal()"
             >
               Donate Now
             </button>
@@ -169,6 +175,7 @@
             />
             <button
               class="bg-primary text-xl font-semibold p-[18px] w-full text-center rounded-lg hover:bg-[#91db31] transition-all duration-300"
+              onclick="my_modal_1.showModal()"
             >
               Donate Now
             </button>
@@ -223,14 +230,14 @@
 
       <!-- history section design  -->
       <section id="history-list" class="hidden max-w-screen-xl mx-auto">
-        <div class="p-8 border border-[#111111]/10 rounded-2xl mb-8">
+        <!-- <div class="p-8 border border-[#111111]/10 rounded-2xl mb-8">
           <h2 class="text-xl font-bold mb-3">
             96500 Taka is Donated for famine-2024 at Feni, Bangladesh
           </h2>
           <p class="text-[#111111]/70 font-light ]">
             Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
           </p>
-        </div>
+        </div> -->
       </section>
       <!-- history section design  -->
 
