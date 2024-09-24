@@ -19,13 +19,28 @@ document.getElementById("history-btn").addEventListener("click", function () {
 });
 
 document.getElementById("post-1-btn").addEventListener("click", function () {
-  const postBtn = document.getElementById("post-1-btn");
+  const cashAmountNumber = parseInt(cashAmount.innerText);
+  const inputFirstValue = document.getElementById("post-1-input");
   const inputValue = handleInputValue("post-1-input");
+
+  if (inputValue > cashAmountNumber) {
+    alert("You don't have enough cash");
+    inputFirstValue.value = "";
+    return;
+  }
+
+  if (isNaN(inputValue) || inputValue <= 0) {
+    alert("Please provide a valid number");
+    inputFirstValue.value = "";
+    return;
+  } else {
+    handleModal();
+  }
 
   const post1Amount = document.getElementById("post-1-amount").innerText;
   const totalAmount = parseInt(post1Amount) + inputValue;
   document.getElementById("post-1-amount").innerText = totalAmount;
   cashAmount.innerText = parseInt(cashAmount.innerText) - inputValue;
   handleHistoryList("post-1-title", inputValue);
-  document.getElementById("post-1-input").value = "";
+  inputFirstValue.value = "";
 });

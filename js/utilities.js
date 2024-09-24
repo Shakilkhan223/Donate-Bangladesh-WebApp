@@ -5,6 +5,7 @@ function handleInputValue(id) {
 }
 
 function handleHistoryList(id, inputValue) {
+  const currentTime = new Date();
   const title = document.getElementById(id).innerText;
   const historyList = document.getElementById("history-list");
   historyList.innerHTML += `
@@ -13,8 +14,13 @@ function handleHistoryList(id, inputValue) {
             ${inputValue} Taka is Donated for ${title}
           </h2>
           <p class="text-[#111111]/70 font-light ]">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+            Date : ${currentTime}
           </p>
     </div>
   `;
+}
+
+function handleModal() {
+  const modal = document.getElementById("modal");
+  modal.showModal();
 }
