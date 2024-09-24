@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <title>Donate Bangladesh</title>
+
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Daisy and tailwind css link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
+            colors: {
+              primary: "#B4F461",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lexend">
+    <!-- header section start  -->
+    <header>
+      <nav class="bg-[#F9F7F3] pt-6 pb-16">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between">
+          <button
+            onclick="window.location.href='/index.html';"
+            class="text-xl font-semibold bg-primary py-3 px-8 rounded-lg"
+          >
+            Home
+          </button>
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="Logo" />
+            <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <img src="assets/coin.png" alt="Coin" />
+            <p class="text-xl font-semibold">
+              <span id="cash-amount">5500</span> BDT
+            </p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header section end  -->
+
+    <!-- main section start -->
+    <main class="max-w-screen-xl mx-auto">
+      <section class="mb-24 mt-16">
+        <!-- title  -->
+        <div class="border-y-[3px] border-dashed text-center py-8">
+          <h2 class="text-4xl font-bold">
+            Important <span class="text-primary">FAQS</span>
+          </h2>
+        </div>
+
+        <!-- content section  -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] md:grid-cols-[0.7fr_1.3fr] gap-10 border sm:p-8 p-5 rounded-xl mt-12"
+        >
+          <!-- image section  -->
+          <div>
+            <img src="assets/faq.png" alt="" class="w-full rounded-2xl" />
+          </div>
+
+          <!-- accordion section  -->
+          <div class="space-y-2">
+            <div class="collapse collapse-plus border-b rounded-none">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-bold">
+                What is the DOM in JavaScript?
+              </div>
+              <div class="collapse-content">
+                <p class="text-lg opacity-80">
+                  The DOM (Document Object Model) is a representation of an HTML
+                  or XML document that enables programs to change the structure,
+                  style, and content of web pages. Essentially, it is an
+                  object-oriented model of the web page, where each part of the
+                  document—like headings, paragraphs, and divs—becomes an
+                  object. The DOM represents the document as a tree of nodes,
+                  with each node corresponding to a part of the HTML structure.
+                  JavaScript uses the DOM to dynamically update or manipulate
+                  content on a web page without needing to reload the entire
+                  page.
+                </p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus border-b rounded-none">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-bold">
+                How do you select an HTML element using JavaScript?
+              </div>
+              <div class="collapse-content">
+                <p class="text-lg opacity-80">
+                  In JavaScript, there are several methods available to access
+                  and select elements within a web page via the DOM. Elements
+                  can be selected based on their unique id, class name, tag
+                  name, or by using CSS selectors. By referencing these
+                  attributes, JavaScript can retrieve specific elements from the
+                  document to be manipulated. Selecting elements is essential
+                  for making dynamic changes to the page, such as updating text
+                  or styles. The right method to use depends on how the element
+                  is structured and identified in the HTML code.
+                </p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus border-b rounded-none">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-bold">
+                How can you change the content of an HTML element using
+                JavaScript?
+              </div>
+              <div class="collapse-content">
+                <p class="text-lg opacity-80">
+                  The DOM allows JavaScript to change the content of HTML
+                  elements dynamically. This is usually done by accessing the
+                  text or content of a particular element. For example,
+                  developers can replace text within a paragraph or heading, or
+                  modify the structure of HTML within a div or section. The DOM
+                  provides flexibility to edit the content in real-time, which
+                  is useful in creating interactive, responsive web pages.
+                  Changes happen instantly without requiring a page refresh,
+                  offering an efficient way to update the user experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus border-b rounded-none">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-bold">
+                How do you add an event listener to an HTML element using
+                JavaScript?
+              </div>
+              <div class="collapse-content">
+                <p class="text-lg opacity-80">
+                  Event listeners are a key part of JavaScript's interaction
+                  with the DOM, enabling elements to respond to user actions
+                  like clicks, keystrokes, or mouse movements. By attaching
+                  event listeners to specific elements, you can trigger actions
+                  or functions when a particular event occurs. Event listeners
+                  make web pages more dynamic and interactive, allowing for
+                  real-time responses to user behavior. They are foundational in
+                  building responsive, user-friendly interfaces that can react
+                  instantly to user input.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- main section end  -->
+
+    <!-- footer section start  -->
+    <footer class="bg-[#F9F7F3] py-8 mt-32">
+      <p class="text-center text-lg font-light py-6">
+        Copyright &copy; 2024. All Rights Reserved
+      </p>
+    </footer>
+    <!-- footer section end  -->
+  </body>
+</html>
